@@ -4,7 +4,7 @@ require_relative '../lib/place'
 describe Place do
 
   let(:empty) { Place.new }
-  let(:filled) { Place.new(filled) }
+  let(:filled) { Place.new(true) }
 
   it 'should be an instance of Place' do
     expect(empty()).to be_an_instance_of(Place)
@@ -14,7 +14,7 @@ describe Place do
   it 'should denote filled places' do
     expect(filled.filled).to eq(true)
 
-    empty.filled(true)
+    empty.filled = true
     expect(empty.filled).to eq(true)
   end
 end
