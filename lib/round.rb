@@ -1,8 +1,10 @@
 class Round
 
-  attr_accessor
+  attr_accessor :winner, :loser
 
   def initialize()
+    @winner = nil
+    @loser = nil
   end
 
   def player1
