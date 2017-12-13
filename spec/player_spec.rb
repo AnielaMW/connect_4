@@ -37,7 +37,7 @@ describe Player do
   # end
 
   it 'should assign a marker to each player' do
-    expect(p1.marker).to eq('X')
-    expect(p2.marker).to eq('O')
+    expect(p1.marker).to eq(nil)
+    expect(p2.marker).to eq(nil)
   end
 end
