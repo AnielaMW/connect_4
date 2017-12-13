@@ -14,6 +14,11 @@ describe Round do
     expect(round.player2).to be_an_instance_of(Player)
   end
 
+  it 'should assign a marker to each player' do
+    expect(round.player1.marker).to eq('X')
+    expect(round.player2.marker).to eq('O')
+  end
+
   it 'should have a winner and a loser' do
     expect(round.winner).to be_an_instance_of(Player)
     expect(round.loser).to be_an_instance_of(Player)
