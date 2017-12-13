@@ -1,5 +1,5 @@
 require 'spec_helper'
-require_relative '../lib/player'
+require_relative '../lib/board'
 
 describe Board do
 
