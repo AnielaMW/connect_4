@@ -12,16 +12,23 @@ describe Player do
   # The game cannot proceed until they each specify a name
   # Each name must be unique
 
-  let(:p1) { Player.new('Emma') }
-  let(:p2) { Player.new('Lizzie') }
+  let(:p1) { Player.new }
+  let(:p2) { Player.new }
 
   it 'should be an instance of Player' do
+
     expect(p1).to be_an_instance_of(Player)
     expect(p2).to be_an_instance_of(Player)
   end
 
   it 'should ask a players name and be able to return name' do
+    p1_name = 'Emma'
+    p2_name = 'Lizzie'
+
+    p1.name = p1_name
     expect(p1.name).to eq('Emma')
+
+    p2.name = p2_name
     expect(p2.name).to eq('Lizzie')
   end
 
