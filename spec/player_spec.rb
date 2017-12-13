@@ -12,38 +12,32 @@ describe Player do
   # The game cannot proceed until they each specify a name
   # Each name must be unique
 
-  let(:p1) { Player.new }
-  let(:p2) { Player.new }
+  let(:p1) { Player.new('Emma') }
+  let(:p2) { Player.new('Lizzie') }
 
   it 'should be an instance of Player' do
-
     expect(p1).to be_an_instance_of(Player)
     expect(p2).to be_an_instance_of(Player)
   end
 
   it 'should ask a players name and be able to return name' do
-    p1_name = 'Emma'
-    p2_name = 'Lizzie'
-
-    p1.name = p1_name
     expect(p1.name).to eq('Emma')
-
-    p2.name = p2_name
     expect(p2.name).to eq('Lizzie')
   end
 
   # it 'should not allow continuation until two player names are entered' do
-  #   p1_name = 'Emma'
-  #   p1.name = p1_name
-  #
   #   # expect to get error if no player_2 name is entered
   # end
   #
   # it 'should not allow two player names to be identical' do
-  #   p1_name = 'Emma'
-  #   p1.name = p1_name
-  #   p2.name = p2_name
+  #   p1
+  #   p2.name = p1.name
   #
   #   # expect to get error if player_2 name is identical to player_1
   # end
+
+  it 'should assign a marker to each player' do
+    expect(p1.marker).to eq('X')
+    expect(p2.marker).to eq('O')
+  end
 end
