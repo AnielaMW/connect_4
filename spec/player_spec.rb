@@ -35,4 +35,9 @@ describe Player do
   #
   #   # expect to get error if player_2 name is identical to player_1
   # end
+
+  it 'should assign a marker to each player' do
+    expect(p1.marker).to eq('X')
+    expect(p2.marker).to eq('O')
+  end
 end
